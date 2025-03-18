@@ -3,7 +3,7 @@ const router = express.Router();
 const { callAnyRest } = require('../Modules_users/callanyrestv2'); // Ensure this path is correct
 
 router.get('/rest_api_process', (req, res) => {
-    res.render('/rest_api_process', { title: 'REST API Process' });
+    res.render('/rest_api_process', { title: 'REST API Processx' });
 });
 /*
 router.post('rest_api_process', async (req, res) => {
