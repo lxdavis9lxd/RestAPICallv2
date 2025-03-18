@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { callAnyRest } = require('../callanyrestv2');
+const { callAnyRest } = require('../Modules_users/callanyrestv2'); // Ensure this path is correct
 
-router.post('/rest_api_process', async (req, res) => {
+router.get('rest_api_process', (req, res) => {
+    res.render('rest_api_process');
+});
+
+router.post('rest_api_process', async (req, res) => {
     const { url, method, body, authorization } = req.body;
 
     try {
