@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REST API Process</title>
+</head>
+<body>
+    <h1>REST API Call Form</h1>
+    <form action="/rest_api_process" method="post">
+        <div>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+        </div>
+        <div>
+            <label for="method">Method:</label>
+            <select id="method" name="method" required>
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+        </div>
+        <div>
+            <label for="authorization">Authorization:</label>
+            <input type="text" id="authorization" name="authorization">
+        </div>
+        <div>
+            <label for="body">Body:</label>
+            <textarea id="body" name="body"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
