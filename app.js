@@ -5,9 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var restcallRouter = require('./routes/restapiprocess'); // Ensure this path is correct
-
-
+var restApiProcessRouter = require('./routes/restapiprocess'); // Ensure this path is correct
+var xxxx = require('./routes/index copy'); // Ensure this path is correct
 
 var app = express();
 
@@ -23,7 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/restapiprocess', restcallRouter)
+app.use('/', restApiProcessRouter); // Ensure this path is correct
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
